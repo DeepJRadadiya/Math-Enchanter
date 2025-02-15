@@ -2,9 +2,9 @@ import Package.curvsFitting as curvsFitting
 import Package.BasicStatistics as statistics
 import Package.Correlation as correlation
 import Package.Matrix as matrixs
-
+import Package.CoordinateGeometry as corrdinate
 def psSolver():
-    print('1. curv fitting\n2. Basic Statistics\n3. Correlation and Regression\n4. Matrix\n0. exit')
+    print('1. curv fitting\n2. Basic Statistics\n3. Correlation and Regression\n4. Matrix\n5. Coordinate Geometry\n0. exit')
     try:
         choice = int(input('enter the choice:'))
         if choice == 1:
@@ -29,6 +29,12 @@ def psSolver():
             try:
                 print("\n")
                 matrixs.matrix()
+            except NameError:
+                Error: NameError
+        elif choice == 5:
+            try:
+                print("\n")
+                corrdinate.main()
             except NameError:
                 Error: NameError
         elif choice == 0:

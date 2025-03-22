@@ -1,20 +1,19 @@
 import numpy as np
 import scipy.stats as stats
-import matplotlib.pyplot as plt
 
 def mean_individual(observations):
-    return np.mean(observations)
+    return np.mean(observations) #for mean
 
 def mean_discrete(values, frequencies):
-    return np.sum(np.array(values) * np.array(frequencies)) / np.sum(frequencies)
+    return np.sum(np.array(values) * np.array(frequencies)) / np.sum(frequencies) #mean for freq data
 
 def mean_continuous(values, frequencies, assumed_mean):
     deviations = np.array(values) - assumed_mean
-    mean = assumed_mean + (np.sum(deviations * frequencies) / np.sum(frequencies))
+    mean = assumed_mean + (np.sum(deviations * frequencies) / np.sum(frequencies)) # assumed mean
     return mean
 
 def median_individual(observations):
-    return np.median(observations)
+    return np.median(observations) 
 
 def median_discrete(values, frequencies):
     cumulative_frequencies = np.cumsum(frequencies)
@@ -25,7 +24,7 @@ def median_discrete(values, frequencies):
 
 def mode_individual(observations):
     mode_val = stats.mode(observations)
-    return mode_val.mode[0]
+    return mode_val
 
 def mode_discrete(values, frequencies):
     mode_index = np.argmax(frequencies)

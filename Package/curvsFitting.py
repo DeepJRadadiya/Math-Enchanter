@@ -37,7 +37,6 @@ def fit_curve():
     # Curve fitting
     if choice == 1:
         popt, _ = curve_fit(linear_curve, x_points, y_points)
-        # print('------->',popt,_)
         fitted_y = linear_curve(x_points, *popt)
         equation = f"y = {popt[0]:.2f}x + {popt[1]:.2f}"
     else:

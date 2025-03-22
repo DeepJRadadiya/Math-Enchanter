@@ -14,7 +14,6 @@ def get_matrix(n):
 def solve_matrix(matrix):
     if matrix is None:
         return
-    
     det = np.linalg.det(matrix)
     print(f"Determinant: {det:.2f}")
 
@@ -53,11 +52,13 @@ def matrix_operations(matrix1, matrix2):
 
 def matrix():
     size = int(input("\nEnter matrix size (2 for 2x2, 3 for 3x3): "))
+
     if size not in [2, 3]:
         print("Invalid size. Only 2x2 or 3x3 matrices are supported.")
     else:
         print("Enter first matrix:")
         matrix1 = get_matrix(size)
+
         print("Enter second matrix:")
         matrix2 = get_matrix(size)
       
